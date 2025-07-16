@@ -7,7 +7,6 @@
   font-style: normal;
 }
 
-
 body,
 html {
   font-family: "Michroma", sans-serif;
@@ -40,14 +39,18 @@ html {
   left: 0;
   width: 100%;
   height: 100vh;
-  background: linear-gradient(to bottom, rgba(12, 35, 71, 0.54), rgba(0, 5, 15, 0.78), rgba(5, 17, 40, 0.66));
+  background: linear-gradient(
+    to bottom,
+    rgba(12, 35, 71, 0.3),
+    rgba(0, 5, 15, 0.78),
+    rgba(5, 17, 40, 0.52)
+  );
   background-size: 100% 300%;
   background-position: top;
   animation: gradientShift 5s ease-in-out infinite alternate;
   z-index: 0;
   pointer-events: none;
 }
-
 
 .navbar {
   width: 100%;
@@ -64,7 +67,7 @@ html {
 }
 
 .logo img {
-  height: 45px;  
+  height: 45px;
   width: auto;
   object-fit: contain;
 }
@@ -117,7 +120,6 @@ html {
   overflow: hidden;
   transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
 }
-
 
 .animated-button svg {
   position: absolute;
@@ -276,7 +278,6 @@ html {
   opacity: 1;
 }
 
-
 .dropdown {
   position: relative;
 }
@@ -316,7 +317,6 @@ html {
   z-index: 5;
 }
 
-
 .hero h1 {
   font-size: 38px;
   font-weight: 700;
@@ -325,10 +325,28 @@ html {
 }
 
 .hero p {
-    margin-bottom: 50px;
+  margin-bottom: 50px;
 }
 
 .hero button {
-    font-size: 20px;
+  font-size: 20px;
 }
 
+.social-icons {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.social-icons img {
+  width: 30px;
+  margin-left: 10px;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.social-icons img:hover {
+  transform: scale(1.2);
+}
