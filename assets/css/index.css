@@ -2,15 +2,15 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Michroma", sans-serif;
+  font-family: "open sans", sans-serif;
   font-weight: 200;
   font-style: normal;
 }
 
 body,
 html {
-  font-family: "Michroma", sans-serif;
-  font-weight: 200;
+  font-family: "open sans", sans-serif;
+  font-weight: 400;
   font-style: normal;
   height: 100%;
   background: black;
@@ -67,7 +67,7 @@ html {
 }
 
 .logo img {
-  height: 45px;
+  height: 60px;
   width: auto;
   object-fit: contain;
 }
@@ -80,6 +80,7 @@ html {
   display: flex;
   align-items: center;
   gap: 25px;
+  font-size: 18px;
 }
 
 .nav-links li a {

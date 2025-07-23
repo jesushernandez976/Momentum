@@ -29,37 +29,6 @@ gsap.from(".slide-up-on-scroll", {
 
 
 
-const container = document.getElementById('testimonialContainer');
-const cards = document.querySelectorAll('.testimonial-card');
-const nextBtn = document.getElementById('nextBtn');
-const prevBtn = document.getElementById('prevBtn');
-
-let index = 0;
-const cardsPerPage = 3;
-
-function updateCarousel() {
-  const cardWidth = cards[0].offsetWidth + 32; // 32px gap (2rem)
-  container.scrollTo({
-    left: index * cardWidth,
-    behavior: 'smooth'
-  });
-}
-
-nextBtn.addEventListener('click', () => {
-  const maxIndex = Math.ceil(cards.length / cardsPerPage) - 1;
-  if (index < maxIndex) {
-    index++;
-    updateCarousel();
-  }
-});
-
-prevBtn.addEventListener('click', () => {
-  if (index > 0) {
-    index--;
-    updateCarousel();
-  }
-});
-
 document.addEventListener("DOMContentLoaded", () => {
   const modalOverlay = document.getElementById("modalOverlay");
   const modalBox = document.getElementById("modalBox");
