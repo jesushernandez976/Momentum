@@ -3,14 +3,14 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "open sans", sans-serif;
-  font-weight: 400;
+  font-weight: 200;
   font-style: normal;
 }
 
 body,
 html {
   font-family: "open sans", sans-serif;
-  font-weight: 400;
+  font-weight: 200;
   font-style: normal;
   height: 100%;
   background: black;
@@ -21,6 +21,7 @@ html {
   height: 100vh;
   width: 100%;
   overflow: hidden;
+  background: black;
 }
 
 .bg-image {
@@ -32,6 +33,20 @@ html {
   object-fit: cover;
   z-index: 0;
 }
+
+.picture-section {
+    padding: 2rem 0;
+    text-align: center;
+    background-color: #000; /* optional background */
+}
+
+.image-wrapper img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 1rem; /* optional: rounds the corners */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* optional: subtle shadow */
+}
+
 
 .video-overlay {
   position: absolute;
@@ -61,7 +76,7 @@ html {
   position: absolute;
   top: 0;
   z-index: 10;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 9), rgba(0, 0, 0, 0));
+  background: black;
   color: #fff;
   font-size: 13px;
 }
@@ -79,7 +94,7 @@ html {
   list-style: none;
   display: flex;
   align-items: center;
-  gap: 25px;
+  gap: 65px;
   font-size: 18px;
 }
 

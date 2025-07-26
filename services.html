@@ -51,21 +51,20 @@
 
     <div class="video-container">
 
-        <img src="./assets/example5.jpg" alt="Hero background" class="bg-image" />
-
+        <img src="./assets/bg1.png" alt="Hero background" class="bg-image" />
 
         <div class="video-overlay"></div>
 
 
         <!-- Navbar -->
         <nav class="navbar">
-            <div class="logo">
+            <div class="logo fade-in">
                 <img src="./assets/ftlogo.png" alt="Momentum Chiropractic & Rehabilitation Logo">
             </div>
 
 
 
-            <ul class="nav-links">
+            <ul class="nav-links fade-in">
                 <li><a href="index.html">Home</a></li>
                 <li class="dropdown">
                     <a href="services.html">Services ▾</a>
@@ -97,7 +96,7 @@
         </nav>
 
         <!-- Hero Text -->
-        <div class="hero">
+        <div class="hero fade-in">
             <h1>Care That Keeps You Moving</h1>
             <p>
                 Chiropractic, manual therapy, and performance rehab, crafted for people who demand more from their
@@ -127,7 +126,7 @@
         </div>
     </div>
 
-    <div class="px-4 py-5 text-center gradient-bg text-white position-relative overflow-hidden ">
+    <!-- <div class="px-4 py-5 text-center gradient-bg text-white position-relative overflow-hidden ">
         <div class="position-relative fade-in" style="z-index: 1;">
             <h1 class="display-6 fw-bold mt-5">Services</h1>
             <div class="col-lg-6 mx-auto">
@@ -136,7 +135,7 @@
                 </p>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <section class="features-section">
         <div class="features-wrapper">
@@ -151,9 +150,11 @@
             <div class="features-content fade-in">
                 <div class="features-grid">
                     <div class="feature-item">
-                        <!-- <span class="icon-wrap">
-                            <img src="./assets/example3.jpg" alt="Icon" width="100" height="100" />
-                        </span> -->
+                        <section class="picture-section">
+                            <div class="image-wrapper">
+                                <img src="./assets/example5.jpg" alt="Section Image" />
+                            </div>
+                        </section>
                         <h2 class="feature-title">Chiropractic Care</h2>
                         <p class="feature-desc">Targeted adjustments and joint care to improve function, and relieve
                             pain, keeping your body moving the way it’s meant to.
@@ -198,12 +199,14 @@
                     </div>
 
                     <div class="feature-item">
-                        <!-- <span class="icon-wrap">
-                            <img src="./assets/example3.jpg" alt="Icon" width="100" height="100" />
-                        </span> -->
-                        <h2 class="feature-title">Manual Therapy</h2>
-                        <p class="feature-desc">Hands‑on techniques like soft‑tissue release, cupping, and dry needling
-                            to reduce tension, speed up recovery, and unlock better movement.</p>
+                        <section class="picture-section">
+                            <div class="image-wrapper">
+                                <img src="./assets/example2.jpg" alt="Section Image" />
+                            </div>
+                        </section>
+                        <h2 class="feature-title">Performance Rehab</h2>
+                        <p class="feature-desc">Customized exercise and strength programming designed to rebuild
+                            stability, enhance mobility and peak performance.</p>
 
                         <button class="animated-button4 open-modal-btn" id="modal2">
                             <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
@@ -241,95 +244,7 @@
                         </div>
                     </div>
 
-                    <div class="feature-item">
-                        <!-- <span class="icon-wrap">
-                            <img src="./assets/example3.jpg" alt="Icon" width="100" height="100" />
-                        </span> -->
-                        <h2 class="feature-title">Performance Rehab</h2>
-                        <p class="feature-desc">Customized exercise and strength programming designed to rebuild
-                            stability, enhance mobility, and bridge the gap between recovery and peak performance.</p>
 
-                        <button class="animated-button4 open-modal-btn" id="modal3">
-                            <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
-                                </path>
-                            </svg>
-                            <span class="text">Open Service</span>
-                            <span class="circle"></span>
-                            <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
-                                </path>
-                            </svg>
-                        </button>
-
-                        <!-- Modal Overlay -->
-                        <div class="modal-overlay gradient-bg" id="modalOverlay3">
-                            <div class="modal-box" id="modalBox">
-                                <img src="./assets/example3.jpg" alt="Modal Image" class="modal-img" />
-                                <div class="modal-content">
-                                    <h3>Service 3</h3>
-                                    <p id="modalText">Step 1: Lorem ipsum dolor sit amet.</p>
-                                    <div class="dots">
-                                        <div class="dot active" data-step="0"></div>
-                                        <div class="dot" data-step="1"></div>
-                                        <div class="dot" data-step="2"></div>
-                                        <div class="dot" data-step="3"></div>
-                                    </div>
-                                    <div class="modal-buttons">
-                                        <button class="btn-skip" id="skipBtn">Back</button>
-                                        <button class="btn-next" id="nextStepBtn">Next</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="feature-item">
-                        <!-- <span class="icon-wrap">
-                            <img src="./assets/example3.jpg" alt="Icon" width="100" height="100" />
-                        </span> -->
-                        <h2 class="feature-title">Service 4</h2>
-                        <p class="feature-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ab
-                            nulla quod dignissimos.</p>
-
-                        <button class="animated-button4 open-modal-btn" id="modal4">
-                            <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
-                                </path>
-                            </svg>
-                            <span class="text">Open Service</span>
-                            <span class="circle"></span>
-                            <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
-                                </path>
-                            </svg>
-                        </button>
-
-                        <!-- Modal Overlay -->
-                        <div class="modal-overlay gradient-bg" id="modalOverlay4">
-                            <div class="modal-box" id="modalBox">
-                                <img src="./assets/example3.jpg" alt="Modal Image" class="modal-img" />
-                                <div class="modal-content">
-                                    <h3>Service 4</h3>
-                                    <p id="modalText">Step 1: Lorem ipsum dolor sit amet.</p>
-                                    <div class="dots">
-                                        <div class="dot active" data-step="0"></div>
-                                        <div class="dot" data-step="1"></div>
-                                        <div class="dot" data-step="2"></div>
-                                        <div class="dot" data-step="3"></div>
-                                    </div>
-                                    <div class="modal-buttons">
-                                        <button class="btn-skip" id="skipBtn">Back</button>
-                                        <button class="btn-next" id="nextStepBtn">Next</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
 
                 <div class="image-wrap">
@@ -459,121 +374,109 @@
                     <div class="accordion-body text-white text-start">Desc</div>
                 </div>
             </div>
+            
+        </div>
+    </div>
 
-            <div class="accordion-item bg-dark border-white">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-dark text-white" type="button"
-                        data-bs-toggle="collapse" data-bs-target="#step10" aria-expanded="false" aria-controls="step10">
-                        Other
-                    </button>
-                </h2>
-                <div id="step10" class="accordion-collapse collapse" data-bs-parent="#processSteps">
-                    <div class="accordion-body text-white text-start">Desc</div>
+
+
+    <div class="gradient-bg dark-bg-gray-900">
+        <div class="container3">
+            <h1 class="title">Packages</h1>
+
+            <p class="subtitle">
+                description here
+            </p>
+
+            <div class="grid mb-5">
+                <div class="pricing-card">
+                    <p class="plan-name">package 1</p>
+                    <!-- <h2 class="price">$0</h2> -->
+                    <p class="duration">desc. </p>
+                    <button class="btn btn-blue">Book Now</button>
+                </div>
+
+                <div class="pricing-card premium">
+                    <p class="plan-name">Package 2</p>
+                    <!-- <h2 class="price">$40</h2> -->
+                    <p class="duration">Desc</p>
+                    <button class="btn btn-white">Book Now</button>
+                </div>
+
+                <div class="pricing-card">
+                    <p class="plan-name">Package 3</p>
+                    <!-- <h2 class="price">$100</h2> -->
+                    <p class="duration">Desc.</p>
+                    <button class="btn btn-blue">Book Now</button>
                 </div>
             </div>
         </div>
     </div>
 
 
-
-        <div class="gradient-bg dark-bg-gray-900">
-            <div class="container3">
-                <h1 class="title">Packages</h1>
-
-                <p class="subtitle">
-                    description here
-                </p>
-
-                <div class="grid mb-5">
-                    <div class="pricing-card">
-                        <p class="plan-name">package 1</p>
-                        <!-- <h2 class="price">$0</h2> -->
-                        <p class="duration">desc. </p>
-                        <button class="btn btn-blue">Book Now</button>
-                    </div>
-
-                    <div class="pricing-card premium">
-                        <p class="plan-name">Package 2</p>
-                        <!-- <h2 class="price">$40</h2> -->
-                        <p class="duration">Desc</p>
-                        <button class="btn btn-white">Book Now</button>
-                    </div>
-
-                    <div class="pricing-card">
-                        <p class="plan-name">Package 3</p>
-                        <!-- <h2 class="price">$100</h2> -->
-                        <p class="duration">Desc.</p>
-                        <button class="btn btn-blue">Book Now</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="container-fluid bg-dark text-white">
-            <footer class="py-5">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-6 col-md-2 mb-3">
-                            <ul class="nav flex-column">
-                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Home</a></li>
-                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">about</a></li>
-                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Pricing</a></li>
-                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">FAQs</a></li>
-                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">About</a></li>
-                            </ul>
-                        </div>
-
-                        <div class="col-6 col-md-4 mb-3 text-white">
-                            <h5 class="mb-3">Address</h5>
-                            <address>
-                                123 Recovery Way<br>
-                                City, ST 45678<br>
-                                United States<br>
-                                <a href="mailto:info@example.com"
-                                    class="text-white text-decoration-underline">info@example.com</a><br>
-                                <a href="tel:+11234567890" class="text-white text-decoration-underline">+1 (123)
-                                    456-7890</a>
-                            </address>
-                        </div>
-
-                        <!-- Map instead of newsletter -->
-                        <div class="col-md-6 mb-3">
-                            <h5>Our Location</h5>
-                            <div class="ratio ratio-16x9">
-                                <iframe class="rounded"
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.0499341635296!2d-122.4206790846814!3d37.77928087975759!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808c6a5f0515%3A0x9f00c6453e73b6c!2sCivic%20Center%2C%20San%20Francisco%2C%20CA%2094102!5e0!3m2!1sen!2sus!4v1674867314626!5m2!1sen!2sus"
-                                    width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
-                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div
-                        class="d-flex flex-column flex-sm-row justify-content-between py-4 mt-4 border-top border-white">
-                        <p class="mb-0">© 2025 Form Theory Chiropractic & Performance Rehab, LLC. All rights reserved.</p>
-                        <ul class="list-unstyled d-flex social-icons2">
-                            <img src="./assets/ig logo.png" alt="Instagram">
-                            <img src="./assets/fb logo.png" alt="Twitter">
-                            <img src="./assets/youtube.png" alt="youtube">
-
+    <div class="container-fluid bg-dark text-white">
+        <footer class="py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6 col-md-2 mb-3">
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Home</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">about</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Pricing</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">FAQs</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">About</a></li>
                         </ul>
                     </div>
+
+                    <div class="col-6 col-md-4 mb-3 text-white">
+                        <h5 class="mb-3">Address</h5>
+                        <address>
+                            123 Recovery Way<br>
+                            City, ST 45678<br>
+                            United States<br>
+                            <a href="mailto:info@example.com"
+                                class="text-white text-decoration-underline">info@example.com</a><br>
+                            <a href="tel:+11234567890" class="text-white text-decoration-underline">+1 (123)
+                                456-7890</a>
+                        </address>
+                    </div>
+
+                    <!-- Map instead of newsletter -->
+                    <div class="col-md-6 mb-3">
+                        <h5>Our Location</h5>
+                        <div class="ratio ratio-16x9">
+                            <iframe class="rounded"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.0499341635296!2d-122.4206790846814!3d37.77928087975759!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808c6a5f0515%3A0x9f00c6453e73b6c!2sCivic%20Center%2C%20San%20Francisco%2C%20CA%2094102!5e0!3m2!1sen!2sus!4v1674867314626!5m2!1sen!2sus"
+                                width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
                 </div>
-            </footer>
-        </div>
+
+                <div class="d-flex flex-column flex-sm-row justify-content-between py-4 mt-4 border-top border-white">
+                    <p class="mb-0">© 2025 Form Theory Chiropractic & Performance Rehab, LLC. All rights reserved.</p>
+                    <ul class="list-unstyled d-flex social-icons2">
+                        <img src="./assets/ig logo.png" alt="Instagram">
+                        <img src="./assets/fb logo.png" alt="Twitter">
+                        <img src="./assets/youtube.png" alt="youtube">
+
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
 
 
 
 
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
-            crossorigin="anonymous"></script>
-        <script src="./assets/js/services.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+    <script src="./assets/js/services.js"></script>
 </body>
 
 </html>

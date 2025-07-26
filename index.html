@@ -60,13 +60,13 @@
 
         <!-- Navbar -->
         <nav class="navbar">
-            <div class="logo">
+            <div class="logo fade-in">
                 <img src="./assets/ftlogo.png" alt="Form Theory Chiropractic & Rehabilitation Logo">
             </div>
 
 
 
-            <ul class="nav-links">
+            <ul class="nav-links fade-in">
                 <li><a href="index.html">Home</a></li>
                 <li class="dropdown">
                     <a href="services.html">Services ▾</a>
@@ -98,7 +98,7 @@
         </nav>
 
         <!-- Hero Text -->
-        <div class="hero">
+        <div class="hero fade-in">
             <h1>Movement-Focused Care for a Stronger, Pain-Free You</h1>
             <p>
                 Precision in movement. Strength in recovery. Results by design.<br />
@@ -157,74 +157,30 @@
         </div>
     </div>
 
-
-
-    <div class="container py-5 text-white text-center">
-        <h1 class="display-5 fw-bold mb-4 fade-in">The Process</h1>
-        <p class="lead mb-5">
-            Here are the steps we take to guide your recovery. We begin with a full assessment, then create a
-            personalized treatment plan. Through adjustments, exercises, and ongoing care, we guide your body
-            back to strength and mobility.
-
-            <br>
-            <br>
-
-            Click below to see each step that we take
-        </p>
-
-        <div class="accordion accordion-flush fade-in" id="processSteps">
-            <div class="accordion-item bg-dark border-white">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-dark text-white" type="button"
-                        data-bs-toggle="collapse" data-bs-target="#step1" aria-expanded="false" aria-controls="step1">
-                        <h3>Restore</h3>
-                    </button>
-                </h2>
-                <div id="step1" class="accordion-collapse collapse" data-bs-parent="#processSteps">
-                    <div class="accordion-body text-white text-start">
-                        Move freely again, shake off pain and stiffness so you can train, play, and live without limits.
-                        .
-                    </div>
+    <section class="bg-image-section text-white">
+        <div class="container col-xxl-8 px-4 py-5">
+            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+                <div class="col-10 col-sm-8 col-lg-6 fade-in">
+                    <img src="./assets/ex1.jpg" class="d-block mx-lg-auto img-fluid rounded-3" alt="Bootstrap Themes"
+                        width="700" height="500" loading="lazy">
                 </div>
-            </div>
-
-            <div class="accordion-item bg-dark border-white">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-dark text-white" type="button"
-                        data-bs-toggle="collapse" data-bs-target="#step2" aria-expanded="false" aria-controls="step2">
-                        <h3>Rebuild</h3>
-                    </button>
-                </h2>
-                <div id="step2" class="accordion-collapse collapse" data-bs-parent="#processSteps">
-                    <div class="accordion-body text-white text-start">
-                        Stronger hips. Tougher joints. A body built for long‑term resilience, not quick fixes.
-
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="accordion-item bg-dark border-white">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-dark text-white" type="button"
-                        data-bs-toggle="collapse" data-bs-target="#step3" aria-expanded="false" aria-controls="step3">
-                        <h3>Preform</h3>
-                    </button>
-                </h2>
-                <div id="step3" class="accordion-collapse collapse" data-bs-parent="#processSteps">
-                    <div class="accordion-body text-white text-start">
-                        Go beyond “normal.” Unlock your potential and do what you love, better than before.
-
-
-                    </div>
+                <div class="col-lg-6">
+                    <h1 class="display-5 fw-bold text-white lh-1 mb-3 fade-in">At Form Theory</h1>
+                    <p class="text-white lead">
+                        We help active people get out of pain, move better, and stay strong for the long haul.
+                        Whether you’re lifting, running, or chasing life’s demands, our expert team blends hands-on care
+                        with
+                        performance‑driven rehab to keep you doing what you love, without limits.
+                    </p>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
 
-    <div class="video-section-wrapper position-relative">
-        <!-- Background Video -->
+
+    <!-- <div class="video-section-wrapper position-relative">
+        
         <video autoplay muted loop playsinline id="vid1" class="bg-video">
             <source src="./assets/vid1.mp4" type="video/mp4" />
             Your browser does not support the video tag.
@@ -279,7 +235,39 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
+
+
+
+    <section class="gradient-bg">
+        <div class="container py-5 text-white text-center">
+            <h1 class="display-5 fw-bold mb-4 fade-in">The Process</h1>
+
+            <div class="fade-in" id="processSteps">
+                <div class="bg-dark border-white p-4 mb-3 text-start">
+                    <h3 class="text-white">Restore</h3>
+                    <p class="text-white">
+                        Move freely again, shake off pain and stiffness so you can train, play, and live without limits.
+                    </p>
+                </div>
+
+                <div class="bg-dark border-white p-4 mb-3 text-start">
+                    <h3 class="text-white">Rebuild</h3>
+                    <p class="text-white">
+                        Stronger hips. Tougher joints. A body built for long‑term resilience, not quick fixes.
+                    </p>
+                </div>
+
+                <div class="bg-dark border-white p-4 text-start">
+                    <h3 class="text-white">Preform</h3>
+                    <p class="text-white">
+                        Go beyond “normal.” Unlock your potential and do what you love, better than before.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     <!-- <section class="section-wrapper">
         <div class="contentWrap fade-in">
@@ -305,7 +293,7 @@
         </div>
     </section> -->
 
-    <section>
+    <section class="testimonial-bg">
         <div class="content-wrapper py-10" id="testimonial">
             <div class="mt-6 flex-between">
                 <div>

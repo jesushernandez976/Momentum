@@ -61,7 +61,7 @@ html {
   position: absolute;
   top: 0;
   z-index: 10;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 9), rgba(0, 0, 0, 0));
+  background: black;
   color: #fff;
   font-size: 13px;
 }
@@ -79,7 +79,7 @@ html {
   list-style: none;
   display: flex;
   align-items: center;
-  gap: 25px;
+  gap: 65px;
   font-size: 18px;
 }
 
@@ -102,6 +102,51 @@ html {
   border-radius: 4px;
   font-weight: 600;
 }
+
+.bg-image-section {
+    background-image: url('/assets/bg3.png'); /* replace with your image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
+}
+
+/* Optional: Add overlay for readability */
+.bg-image-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* dark overlay */
+    z-index: -1;
+}
+
+.testimonial-bg {
+    background-image: url('/assets/bg2.png'); /* Replace with your background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
+    
+}
+
+/* Optional overlay for readability */
+.testimonial-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Adjust the opacity if needed */
+    z-index: -1;
+    
+}
+
 
 .animated-button {
   position: relative;
