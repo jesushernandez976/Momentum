@@ -41,36 +41,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const modalContent = {
     modal1: {
       steps: [
-        "we specialize in subluxation recalibration and neuromuscular rebalancing. Through integrative spinal harmonics and kinetic flow adjustments, we activate the vertebral energy channels and restore intrinsic alignment pathways.",
-        "Our holistic torque-release protocol targetsmisalignments, recalibrating biomechanical feedback loops and promoting craniosacral fluid resonance. Each adjustment facilitates neural decoherence, allowing the spine’s innate intelligence to express optimal postural equilibrium.",
-        "Our holistic  targets latent vertebral misalignments, recalibrating biomechanical feedback loops and promoting craniosacral fluid resonance. Each adjustment facilitates neural decoherence, allowing the spine’s innate intelligence to express optimal postural equilibrium.",
-        "Our holistic torque-release protocol targets latent vertebral misalignments, recalibrating biomechanical feedback loops and promoting craniosacral fluid resonance. Each adjustment facilitates neural decoherence, allowing the spine’s innate intelligence to express optimal postural equilibrium."
+        "We deliver precise chiropractic adjustments and soft‑tissue techniques to restore mobility, reduce pain, and improve overall body function. Our goal is simple: help you move better, recover faster, and stay at your best.",
       ]
     },
     modal2: {
        steps: [
-        "we specialize in subluxation recalibration and neuromuscular rebalancing. Through integrative spinal harmonics and kinetic flow adjustments, we activate the vertebral energy channels and restore intrinsic alignment pathways.",
-        "Our holistic torque-release protocol targetsmisalignments, recalibrating biomechanical feedback loops and promoting craniosacral fluid resonance. Each adjustment facilitates neural decoherence, allowing the spine’s innate intelligence to express optimal postural equilibrium.",
-        "Our holistic  targets latent vertebral misalignments, recalibrating biomechanical feedback loops and promoting craniosacral fluid resonance. Each adjustment facilitates neural decoherence, allowing the spine’s innate intelligence to express optimal postural equilibrium.",
-        "Our holistic torque-release protocol targets latent vertebral misalignments, recalibrating biomechanical feedback loops and promoting craniosacral fluid resonance. Each adjustment facilitates neural decoherence, allowing the spine’s innate intelligence to express optimal postural equilibrium."
+        "Whether you’re coming back from an injury, pushing your training, or just want to stay strong and active for your family, our rehab programs are built for real‑world performance. We combine targeted strength work and hands on therapy to restore stability, improve mobility, and help you move at your best, in the gym, on the field, or in everyday life.",
       ]
     },
-    modal3: {
-       steps: [
-        "we specialize in subluxation recalibration and neuromuscular rebalancing. Through integrative spinal harmonics and kinetic flow adjustments, we activate the vertebral energy channels and restore intrinsic alignment pathways.",
-        "Our holistic torque-release protocol targetsmisalignments, recalibrating biomechanical feedback loops and promoting craniosacral fluid resonance. Each adjustment facilitates neural decoherence, allowing the spine’s innate intelligence to express optimal postural equilibrium.",
-        "Our holistic  targets latent vertebral misalignments, recalibrating biomechanical feedback loops and promoting craniosacral fluid resonance. Each adjustment facilitates neural decoherence, allowing the spine’s innate intelligence to express optimal postural equilibrium.",
-        "Our holistic torque-release protocol targets latent vertebral misalignments, recalibrating biomechanical feedback loops and promoting craniosacral fluid resonance. Each adjustment facilitates neural decoherence, allowing the spine’s innate intelligence to express optimal postural equilibrium."
-      ]
-    },
-    modal4: {
-       steps: [
-        "we specialize in subluxation recalibration and neuromuscular rebalancing. Through integrative spinal harmonics and kinetic flow adjustments, we activate the vertebral energy channels and restore intrinsic alignment pathways.",
-        "Our holistic torque-release protocol targetsmisalignments, recalibrating biomechanical feedback loops and promoting craniosacral fluid resonance. Each adjustment facilitates neural decoherence, allowing the spine’s innate intelligence to express optimal postural equilibrium.",
-        "Our holistic  targets latent vertebral misalignments, recalibrating biomechanical feedback loops and promoting craniosacral fluid resonance. Each adjustment facilitates neural decoherence, allowing the spine’s innate intelligence to express optimal postural equilibrium.",
-        "Our holistic torque-release protocol targets latent vertebral misalignments, recalibrating biomechanical feedback loops and promoting craniosacral fluid resonance. Each adjustment facilitates neural decoherence, allowing the spine’s innate intelligence to express optimal postural equilibrium."
-      ]
-    }
   };
 
   let currentModalId = null;
