@@ -46,114 +46,123 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     modal2: {
        steps: [
-        "Whether you’re coming back from an injury, pushing your training, or just want to stay strong and active for your family, our rehab programs are built for real‑world performance. We combine targeted strength work and hands on therapy to restore stability, improve mobility, and help you move at your best, in the gym, on the field, or in everyday life.",
+        "Whether you're coming back from an injury, pushing your training, or just want to stay strong and active for your family, our rehab programs are built for real‑world performance. We combine targeted strength work and hands on therapy to restore stability, improve mobility, and help you move at your best, in the gym, on the field, or in everyday life.",
       ]
     },
   };
 
-  let currentModalId = null;
-  let currentStep = 0;
-
-  // Update modal content and dots active state
-  const updateModal = () => {
-    if (!currentModalId || !modalContent[currentModalId]) return;
-
-    const steps = modalContent[currentModalId].steps;
-    modalText.textContent = steps[currentStep];
-
-    // Update dots - show only the number needed for current modal
-    dots.forEach((dot, index) => {
-      if (index < steps.length) {
-        dot.style.display = 'inline-block';
-        dot.classList.toggle('active', index === currentStep);
-      } else {
-        dot.style.display = 'none';
-      }
-    });
-
-    // Update next button text
-    if (currentStep === steps.length - 1) {
-      nextStepBtn.textContent = 'Done';
-    } else {
-      nextStepBtn.textContent = 'Next';
-    }
-  };
-
-  // Open modal function
-  const openModal = (modalId) => {
-    currentModalId = modalId;
-    currentStep = 0;
-    updateModal();
-    modalOverlay.style.display = "flex";
-    setTimeout(() => {
-      modalBox.classList.add("show");
-    }, 10);
-  };
-
-  // Close modal function
-  const closeModal = () => {
-    modalBox.classList.remove("show");
-    setTimeout(() => {
-      modalOverlay.style.display = "none";
-      currentModalId = null;
-    }, 300);
-  };
-
-  // Event listeners for modal triggers
-  const modalTriggers = [
-    { selector: ".open-modal-btn", modalId: "modal1" },
-    { selector: "#modal2", modalId: "modal2" },
-    { selector: "#modal3", modalId: "modal3" },
-    { selector: "#modal4", modalId: "modal4" }
-  ];
-
-  modalTriggers.forEach(({ selector, modalId }) => {
-    const element = document.querySelector(selector);
-    if (element) {
-      console.log(`Found element for ${selector}, setting up ${modalId}`);
-      element.addEventListener("click", () => openModal(modalId));
-    } else {
-      console.warn(`Element not found: ${selector}`);
-    }
-  });
-
-  // Next step button
-  nextStepBtn.addEventListener("click", () => {
-    if (!currentModalId) return;
-
-    const steps = modalContent[currentModalId].steps;
+  // Create modal controller for each modal
+  const createModalController = (modalId, overlayId, boxId, textId, skipBtnId, nextBtnId, dotsId) => {
+    const modalOverlay = document.getElementById(overlayId);
+    const modalBox = document.getElementById(boxId);
+    const modalText = document.getElementById(textId);
+    const skipBtn = document.getElementById(skipBtnId);
+    const nextStepBtn = document.getElementById(nextBtnId);
+    const dotsContainer = document.getElementById(dotsId);
+    const dots = dotsContainer ? dotsContainer.querySelectorAll(".dot") : [];
     
-    if (currentStep < steps.length - 1) {
-      currentStep++;
+    let currentStep = 0;
+
+    // Update modal content and dots active state
+    const updateModal = () => {
+      if (!modalContent[modalId]) return;
+
+      const steps = modalContent[modalId].steps;
+      modalText.textContent = steps[currentStep];
+
+      // Update dots - show only the number needed for current modal
+      dots.forEach((dot, index) => {
+        if (index < steps.length) {
+          dot.style.display = 'inline-block';
+          dot.classList.toggle('active', index === currentStep);
+        } else {
+          dot.style.display = 'none';
+        }
+      });
+
+      // Update next button text
+      if (currentStep === steps.length - 1) {
+        nextStepBtn.textContent = 'Done';
+      } else {
+        nextStepBtn.textContent = 'Next';
+      }
+    };
+
+    // Open modal function
+    const openModal = () => {
+      currentStep = 0;
       updateModal();
-    } else {
-      // Last step - close modal
-      closeModal();
-    }
-  });
+      modalOverlay.style.display = "flex";
+      setTimeout(() => {
+        modalBox.classList.add("show");
+      }, 10);
+    };
 
-  // Skip/Close button
-  skipBtn.addEventListener("click", closeModal);
+    // Close modal function
+    const closeModal = () => {
+      modalBox.classList.remove("show");
+      setTimeout(() => {
+        modalOverlay.style.display = "none";
+      }, 300);
+    };
 
-  // Click outside to close
-  modalOverlay.addEventListener("click", (e) => {
-    if (e.target === modalOverlay) {
-      closeModal();
-    }
-  });
-
-  // Dot navigation
-  dots.forEach((dot, idx) => {
-    dot.addEventListener("click", () => {
-      if (!currentModalId) return;
+    // Next step button
+    nextStepBtn.addEventListener("click", () => {
+      const steps = modalContent[modalId].steps;
       
-      const steps = modalContent[currentModalId].steps;
-      if (idx < steps.length) {
-        currentStep = idx;
+      if (currentStep < steps.length - 1) {
+        currentStep++;
         updateModal();
+      } else {
+        // Last step - close modal
+        closeModal();
       }
     });
-  });
+
+    // Skip/Close button
+    skipBtn.addEventListener("click", closeModal);
+
+    // Click outside to close
+    modalOverlay.addEventListener("click", (e) => {
+      if (e.target === modalOverlay) {
+        closeModal();
+      }
+    });
+
+    // Dot navigation
+    dots.forEach((dot, idx) => {
+      dot.addEventListener("click", () => {
+        const steps = modalContent[modalId].steps;
+        if (idx < steps.length) {
+          currentStep = idx;
+          updateModal();
+        }
+      });
+    });
+
+    return { openModal, closeModal };
+  };
+
+  // Create controllers for each modal
+  const modal1Controller = createModalController(
+    'modal1', 'modalOverlay1', 'modalBox1', 'modalText1', 'skipBtn1', 'nextStepBtn1', 'dots1'
+  );
+
+  const modal2Controller = createModalController(
+    'modal2', 'modalOverlay2', 'modalBox2', 'modalText2', 'skipBtn2', 'nextStepBtn2', 'dots2'
+  );
+
+  // Set up modal triggers
+  const modal1Trigger = document.getElementById("modal1");
+  const modal2Trigger = document.getElementById("modal2");
+
+  if (modal1Trigger) {
+    modal1Trigger.addEventListener("click", modal1Controller.openModal);
+  }
+
+  if (modal2Trigger) {
+    modal2Trigger.addEventListener("click", modal2Controller.openModal);
+  }
 });
 
 

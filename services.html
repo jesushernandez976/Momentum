@@ -58,9 +58,11 @@
 
         <!-- Navbar -->
         <nav class="navbar">
-            <div class="logo fade-in">
-                <img src="./assets/ftlogo.png" alt="Momentum Chiropractic & Rehabilitation Logo">
-            </div>
+            <a href="index.html">
+                <div class="logo fade-in">
+                    <img src="./assets/ftlogo.png" alt="Form Theory Chiropractic & Rehabilitation Logo">
+                </div>
+            </a>
 
 
 
@@ -115,9 +117,18 @@
         </div>
 
         <div class="social-icons">
-            <img src="./assets/ig logo.png" alt="Instagram">
-            <img src="./assets/fb logo.png" alt="Twitter">
-            <img src="./assets/youtube.png" alt="Youtube">
+            <a href="https://www.instagram.com/formtheoryrehab/" target="_blank" rel="noopener noreferrer">
+                <img src="./assets/ig logo.png" alt="Instagram">
+            </a>
+
+            <a href="https://www.facebook.com/people/Form-Theory/61579281926215/" target="_blank"
+                rel="noopener noreferrer">
+                <img src="./assets/fb logo.png" alt="Facebook">
+            </a>
+
+            <a href="" target="_blank" rel="noopener noreferrer">
+                <img src="./assets/youtube.png" alt="YouTube">
+            </a>
 
         </div>
     </div>
@@ -148,13 +159,14 @@
                     <div class="feature-item">
                         <section class="picture-section">
                             <div class="image-wrapper">
-                                <img src="./assets/example5.jpg" alt="Section Image" />
+                                <img src="./assets/example3.jpg" alt="Section Image" />
                             </div>
                         </section>
                         <h2 class="feature-title">Chiropractic Care</h2>
-                        <p class="feature-desc">Targeted adjustments and joint care to improve function, and relieve
-                            pain, keeping your body moving the way it’s meant to.
-
+                        <p class="feature-desc">We deliver precise chiropractic adjustments alongside targeted
+                            soft-tissue techniques, including instrument-assisted therapy (IASTM), cupping, and dry
+                            needling, to restore mobility, reduce pain, and improve overall body function. Every session
+                            is designed to help you move better, recover faster, and stay at your best.
                         </p>
 
                         <button class="animated-button4 open-modal-btn" id="modal1">
@@ -172,22 +184,22 @@
                             </svg>
                         </button>
 
-                        <!-- Modal Overlay -->
-                        <div class="modal-overlay gradient-bg" id="modalOverlay">
-                            <div class="modal-box" id="modalBox">
+                        <!-- Modal Overlay 1 -->
+                        <div class="modal-overlay gradient-bg" id="modalOverlay1">
+                            <div class="modal-box" id="modalBox1">
                                 <img src="./assets/example3.jpg" alt="Modal Image" class="modal-img" />
                                 <div class="modal-content">
                                     <h3></h3>
-                                    <p id="modalText"></p>
-                                    <div class="dots">
+                                    <p id="modalText1"></p>
+                                    <div class="dots" id="dots1">
                                         <div class="dot active" data-step="0"></div>
                                         <div class="dot" data-step="1"></div>
                                         <div class="dot" data-step="2"></div>
                                         <div class="dot" data-step="3"></div>
                                     </div>
                                     <div class="modal-buttons">
-                                        <button class="btn-skip" id="skipBtn">Back</button>
-                                        <button class="btn-next" id="nextStepBtn">Next</button>
+                                        <button class="btn-skip" id="skipBtn1">Back</button>
+                                        <button class="btn-next" id="nextStepBtn1">Next</button>
                                     </div>
                                 </div>
                             </div>
@@ -197,12 +209,14 @@
                     <div class="feature-item">
                         <section class="picture-section">
                             <div class="image-wrapper">
-                                <img src="./assets/example2.jpg" alt="Section Image" />
+                                <img src="./assets/ex2.jpg" alt="Section Image" />
                             </div>
                         </section>
                         <h2 class="feature-title">Performance Rehab</h2>
-                        <p class="feature-desc">Customized exercise and strength programming designed to rebuild
-                            stability, enhance mobility and peak performance.</p>
+                        <p class="feature-desc">Performance rehab bridges the gap between injury recovery and full,
+                            confident movement. It combines hands-on care with targeted strength, mobility, and movement
+                            training so you can get out of pain, restore function, and perform your best, whether that's
+                            running a race, carrying groceries, or keeping up with your kids.</p>
 
                         <button class="animated-button4 open-modal-btn" id="modal2">
                             <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
@@ -219,40 +233,37 @@
                             </svg>
                         </button>
 
-                        <!-- Modal Overlay -->
+                        <!-- Modal Overlay 2 -->
                         <div class="modal-overlay" id="modalOverlay2">
-                            <div class="modal-box" id="modalBox">
-                                <img src="./assets/example3.jpg" alt="Modal Image" class="modal-img" />
+                            <div class="modal-box" id="modalBox2">
+                                <img src="./assets/ex2.jpg" alt="Modal Image" class="modal-img" />
                                 <div class="modal-content">
-                                    <p id="modalText"></p>
-                                    <div class="dots">
+                                    <p id="modalText2"></p>
+                                    <div class="dots" id="dots2">
                                         <div class="dot active" data-step="0"></div>
                                         <div class="dot" data-step="1"></div>
                                         <div class="dot" data-step="2"></div>
                                         <div class="dot" data-step="3"></div>
                                     </div>
                                     <div class="modal-buttons">
-                                        <button class="btn-skip" id="skipBtn">Back</button>
-                                        <button class="btn-next" id="nextStepBtn">Next</button>
+                                        <button class="btn-skip" id="skipBtn2">Back</button>
+                                        <button class="btn-next" id="nextStepBtn2">Next</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-
                 </div>
             </div>
         </div>
     </section>
-
+    
     <div class="px-4 py-5 text-center gradient-bg text-white position-relative overflow-hidden ">
         <div class="position-relative fade-in" style="z-index: 1;">
-            <h1 class="display-6 fw-bold mt-5">Book Your Service Today</h1>
+            <h1 class="display-6 fw-bold mt-5">Book Your Appointment</h1>
             <div class="col-lg-6 mx-auto">
                 <p class="lead mb-4">
-                    Book your appointment today and start your journey to pain relief, better posture, and total body
-                    wellness
+                    Start now and get back to living on your terms.
                 </p>
                 <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
                     <button class="animated-button3">
@@ -277,7 +288,7 @@
 
 
     <div class="container py-5 text-white text-center fade-in">
-        <h1 class="display-5 fw-bold mb-4">Things from Aches to Injuries, We Treat It All. At Form Theory</h1>
+        <h1 class="display-5 fw-bold mb-4">From Aches to Injuries, We Treat It All.</h1>
         <p class="lead mb-5">
             <!-- desc on packages -->
             <br>
@@ -416,12 +427,12 @@
         </div>
     </div>
 
-     <div class="px-4 py-5 text-center gradient-bg2 text-white position-relative overflow-hidden ">
+    <div class="px-4 py-5 text-center gradient-bg2 text-white position-relative overflow-hidden ">
         <div class="position-relative fade-in" style="z-index: 1;">
             <h1 class="display-6 fw-bold mt-5">Let's Get you Started</h1>
             <div class="col-lg-6 mx-auto">
                 <p class="lead mb-4">
-                    Book your appointment with the link below
+                    Pick a service, find a time that works, and take the first step toward feeling better.
                 </p>
                 <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
                     <button class="animated-button3">
@@ -451,10 +462,13 @@
                     <div class="col-6 col-md-2 mb-3">
                         <ul class="nav flex-column">
                             <li class="nav-item mb-2"><a href="index.html" class="nav-link p-0 text-white">Home</a></li>
-                            <li class="nav-item mb-2"><a href="services.html" class="nav-link p-0 text-white">Services</a></li>
-                            <li class="nav-item mb-2"><a href="team.html" class="nav-link p-0 text-white">Meet the Team</a></li>
+                            <li class="nav-item mb-2"><a href="services.html"
+                                    class="nav-link p-0 text-white">Services</a></li>
+                            <li class="nav-item mb-2"><a href="team.html" class="nav-link p-0 text-white">Meet the
+                                    Team</a></li>
                             <li class="nav-item mb-2"><a href="FAQ.html" class="nav-link p-0 text-white">FAQs</a></li>
-                            <li class="nav-item mb-2"><a href="privacy.html" class="nav-link p-0 text-white">Privacy Policy</a></li>
+                            <li class="nav-item mb-2"><a href="privacy.html" class="nav-link p-0 text-white">Privacy
+                                    Policy</a></li>
                         </ul>
                     </div>
 
@@ -486,9 +500,18 @@
                 <div class="d-flex flex-column flex-sm-row justify-content-between py-4 mt-4 border-top border-white">
                     <p class="mb-0">© 2025 Form Theory Chiropractic & Performance Rehab, LLC. All rights reserved.</p>
                     <ul class="list-unstyled d-flex social-icons2">
-                        <img src="./assets/ig logo.png" alt="Instagram">
-                        <img src="./assets/fb logo.png" alt="Twitter">
-                        <img src="./assets/youtube.png" alt="youtube">
+                        <a href="https://www.instagram.com/formtheoryrehab/" target="_blank" rel="noopener noreferrer">
+                            <img src="./assets/ig logo.png" alt="Instagram">
+                        </a>
+
+                        <a href="https://www.facebook.com/people/Form-Theory/61579281926215/" target="_blank"
+                            rel="noopener noreferrer">
+                            <img src="./assets/fb logo.png" alt="Facebook">
+                        </a>
+
+                        <a href="" target="_blank" rel="noopener noreferrer">
+                            <img src="./assets/youtube.png" alt="YouTube">
+                        </a>
 
                     </ul>
                 </div>

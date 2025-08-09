@@ -883,3 +883,95 @@ h1 {
     flex-direction: column;
   }
 }
+
+.image-stack {
+    position: relative;
+    width: 100%;
+    max-width: 450px;
+    height: 320px;
+    margin: 0 auto;
+}
+
+.image-layer {
+    position: absolute;
+    border-radius: 15px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+}
+
+.image-layer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.image-layer:hover img {
+    transform: scale(1.05);
+}
+
+/* First image - back layer (home1.jpg) */
+.image-layer:nth-child(1) {
+    width: 60%;
+    height: 60%;
+    top: 50%;
+    left: 30%;
+    z-index: 1;
+    opacity: 0.9;
+    padding: 3px;
+}
+
+/* Second image - middle layer (home2.jpg) */
+.image-layer:nth-child(2) {
+    width: 60%;
+    height: 60%;
+    top: 20%;
+    left: 0%;
+    z-index: 2;
+    opacity: 0.95;
+    padding: 3px;
+}
+
+/* Third image - front layer (home3.jpg) */
+.image-layer:nth-child(3) {
+    width: 60%;
+    height: 60%;
+    top: 0;
+    right: 0;
+    left: auto;
+    z-index: 3;
+    padding: 3px;
+}
+
+/* Hover effects */
+.image-stack:hover .image-layer:nth-child(1) {
+    transform: translate(20px, 20px) rotate(4deg);
+}
+
+.image-stack:hover .image-layer:nth-child(2) {
+    transform: translate(-15px, 10px) rotate(-3deg);
+}
+
+.image-stack:hover .image-layer:nth-child(3) {
+    transform: translate(12px, -12px) rotate(3deg);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .image-stack {
+        height: 250px;
+        max-width: 350px;
+    }
+}
+
+@media (max-width: 480px) {
+    .image-stack {
+        height: 200px;
+        max-width: 280px;
+    }
+    
+    .image-layer {
+        border-radius: 10px;
+    }
+}
