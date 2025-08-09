@@ -946,7 +946,7 @@ h1 {
 
 /* Hover effects */
 .image-stack:hover .image-layer:nth-child(1) {
-    transform: translate(20px, 20px) rotate(4deg);
+    transform: translate(30px, 30px) rotate(2deg);
 }
 
 .image-stack:hover .image-layer:nth-child(2) {
@@ -954,7 +954,7 @@ h1 {
 }
 
 .image-stack:hover .image-layer:nth-child(3) {
-    transform: translate(12px, -12px) rotate(3deg);
+    transform: translate(52px, -12px) rotate(5deg);
 }
 
 /* Responsive design */
