@@ -14,6 +14,7 @@ html {
   font-style: normal;
   height: 100%;
   background: black;
+  touch-action: manipulation;
 }
 
 .video-container {
@@ -102,6 +103,105 @@ html {
   border-radius: 4px;
   font-weight: 600;
 }
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .logo img {
+    height: 50px;
+  }
+
+  .navbar {
+    display: none !important;
+  }
+}
+
+.hamburger-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: linear-gradient(to bottom, black, rgba(0, 0, 0, 0.7));
+  position: relative; /* important */
+  z-index: 20; /* above the main navbar */
+  display: none;
+}
+
+.hamburger-logo img {
+  height: 50px;
+}
+
+.hamburger-toggle {
+  display: none; /* shown only on mobile */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 20px;
+  cursor: pointer;
+  z-index: 30; /* above menu */
+}
+
+.hamburger-toggle span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 2px;
+  transition: all 0.3s ease; /* smooth animation */
+}
+
+.hamburger-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -7px);
+}
+
+/* Links */
+.hamburger-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.hamburger-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hamburger-navbar, .hamburger-toggle {
+    display: flex;
+  }
+
+  .hamburger-links {
+    position: absolute;
+    top: 70px; /* adjust if needed */
+    left: 0;
+    right: 0;
+    background-color: #000;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 0;
+    display: none;
+    z-index: 20;
+  }
+
+  .hamburger-links.show {
+    display: flex;
+  }
+}
+
 
 .animated-button {
   position: relative;
@@ -391,6 +491,60 @@ html {
 
 .social-icons2 img:hover {
   transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 38px;
+    width: 600px;
+  }
+
+  .hero p {
+    font-size: 22px;
+  }
+
+  .social-icons {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 28px;
+    width: 350px;
+  }
+
+  .hero p {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+    word-wrap: break-word; /* ensures long text wraps */
+  }
+
+  .footer p {
+    margin-bottom: 10px;
+    max-width: 90%; /* optional: prevents overflow */
+  }
+
+  .social-icons2 {
+    justify-content: center;
+    gap: 45px;
+    margin-top: 70px;
+  }
 }
 
 .gradient-bg {

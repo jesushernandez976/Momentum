@@ -27,33 +27,44 @@ gsap.from(".slide-up-on-scroll", {
   }
 });
 
-const container = document.getElementById('testimonialContainer');
-const cards = document.querySelectorAll('.testimonial-card');
-const nextBtn = document.getElementById('nextBtn');
-const prevBtn = document.getElementById('prevBtn');
+// Toggle Hamburger Menu
+const toggle = document.getElementById('hamburgerToggle');
+const links = document.getElementById('hamburgerLinks');
 
-let index = 0;
-const cardsPerPage = 3;
-
-function updateCarousel() {
-  const cardWidth = cards[0].offsetWidth + 32; // 32px gap (2rem)
-  container.scrollTo({
-    left: index * cardWidth,
-    behavior: 'smooth'
-  });
-}
-
-nextBtn.addEventListener('click', () => {
-  const maxIndex = Math.ceil(cards.length / cardsPerPage) - 1;
-  if (index < maxIndex) {
-    index++;
-    updateCarousel();
-  }
+toggle.addEventListener('click', () => {
+  links.classList.toggle('show');        // show/hide menu
+  toggle.classList.toggle('active');     // transform hamburger into X
 });
 
-prevBtn.addEventListener('click', () => {
-  if (index > 0) {
-    index--;
-    updateCarousel();
-  }
-});
+// const container = document.getElementById('testimonialContainer');
+// const cards = document.querySelectorAll('.testimonial-card');
+// const nextBtn = document.getElementById('nextBtn');
+// const prevBtn = document.getElementById('prevBtn');
+
+// let index = 0;
+// const cardsPerPage = 3;
+
+// function updateCarousel() {
+//   const cardWidth = cards[0].offsetWidth + 32; // 32px gap (2rem)
+//   container.scrollTo({
+//     left: index * cardWidth,
+//     behavior: 'smooth'
+//   });
+// }
+
+// nextBtn.addEventListener('click', () => {
+//   const maxIndex = Math.ceil(cards.length / cardsPerPage) - 1;
+//   if (index < maxIndex) {
+//     index++;
+//     updateCarousel();
+//   }
+// });
+
+// prevBtn.addEventListener('click', () => {
+//   if (index > 0) {
+//     index--;
+//     updateCarousel();
+//   }
+// });
+
+

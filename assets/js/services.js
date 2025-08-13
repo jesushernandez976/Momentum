@@ -165,5 +165,12 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+// Toggle Hamburger Menu
+const toggle = document.getElementById('hamburgerToggle');
+const links = document.getElementById('hamburgerLinks');
 
+toggle.addEventListener('click', () => {
+  links.classList.toggle('show');        // show/hide menu
+  toggle.classList.toggle('active');     // transform hamburger into X
+});
 
