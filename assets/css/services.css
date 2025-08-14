@@ -36,18 +36,17 @@ html {
 }
 
 .picture-section {
-    padding: 2rem 0;
-    text-align: center;
-    background-color: #000; /* optional background */
+  padding: 2rem 0;
+  text-align: center;
+  background-color: #000; /* optional background */
 }
 
 .image-wrapper img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 1rem; /* optional: rounds the corners */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* optional: subtle shadow */
+  max-width: 100%;
+  height: auto;
+  border-radius: 1rem; /* optional: rounds the corners */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* optional: subtle shadow */
 }
-
 
 .video-overlay {
   position: absolute;
@@ -81,7 +80,6 @@ html {
   color: #fff;
   font-size: 13px;
 }
-
 
 .logo img {
   height: 70px;
@@ -195,7 +193,8 @@ html {
 
 /* Responsive */
 @media (max-width: 768px) {
-  .hamburger-navbar, .hamburger-toggle {
+  .hamburger-navbar,
+  .hamburger-toggle {
     display: flex;
   }
 
@@ -220,7 +219,6 @@ html {
   .animated-button4 {
     width: 60% !important;
   }
-
 }
 
 .animated-button {
@@ -687,45 +685,44 @@ html {
 }
 
 .gradient-bg {
-    background: none;
-    background-image: url('../images/bg4.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
+  background: none;
+  background-image: url("../images/bg4.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
 }
 
 .gradient-bg::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(0,0,0,0.5);
-    z-index: 0;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 0;
 }
 
 .gradient-bg2 {
-    background: none;
-    background-image: url('../images/bg2.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
+  background: none;
+  background-image: url("../images/bg2.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
 }
 
 .gradient-bg2::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(0,0,0,0.5);
-    z-index: 0;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 0;
 }
-
 
 .video-section-wrapper {
   position: relative;
@@ -834,7 +831,6 @@ h1 {
   text-align: center;
 }
 
-
 .underline {
   margin-top: 8px;
   margin-right: 80px;
@@ -877,9 +873,39 @@ h1 {
   gap: 32px;
 }
 
+/* MODIFIED: Change feature-item to horizontal layout */
 .feature-item {
   display: flex;
+  flex-direction: row; /* Changed from column to row */
+  align-items: flex-start; /* Align items to the top */
+  gap: 2rem; /* Increased gap for better spacing */
+}
+
+/* NEW: Style the picture section for left positioning */
+.picture-section {
+  flex: 0 0 300px; /* Fixed width, don't grow or shrink */
+}
+
+.image-wrapper {
+  width: 100%;
+  height: auto;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 9px;
+  max-height: 250px; /* Limit height to keep it reasonable */
+}
+
+/* NEW: Create a wrapper for text content */
+.feature-text-content {
+  flex: 1; /* Take up remaining space */
+  display: flex;
   flex-direction: column;
+  align-items: center; /* Center all content horizontally */
+  text-align: center; /* Center text alignment */
   gap: 12px;
 }
 
@@ -896,6 +922,7 @@ h1 {
   font-size: 1.25rem;
   font-weight: 600;
   color: #2772eb;
+  margin-top: 0; /* Remove top margin since image is beside it */
 }
 
 .feature-desc {
@@ -913,6 +940,23 @@ h1 {
   height: 400px;
   object-fit: cover;
   border-radius: 9px;
+}
+
+/* RESPONSIVE: Stack vertically on smaller screens */
+@media (max-width: 768px) {
+  .feature-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .picture-section {
+    flex: none;
+    width: 100%;
+  }
+
+  .image-wrapper img {
+    max-height: none; /* Remove height restriction on mobile */
+  }
 }
 
 .social-icons2 {
