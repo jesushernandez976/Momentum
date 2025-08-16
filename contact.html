@@ -74,7 +74,7 @@
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
 
-                <li><button class="animated-button">
+                <li><button class="animated-button" onclick="window.location.href='https://ftr.janeapp.com/'">
                         <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
@@ -110,8 +110,19 @@
                 <li><a href="team.html">Meet The Doc</a></li>
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
-                <li><button class="animated-button">
+                <li><button class="animated-button" onclick="window.location.href='https://ftr.janeapp.com/'">
+                        <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
+                            </path>
+                        </svg>
                         <span class="text">Book Now</span>
+                        <span class="circle"></span>
+                        <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
+                            </path>
+                        </svg>
                     </button></li>
             </ul>
         </nav>
@@ -123,7 +134,7 @@
                 Click the button "Book Now" to book an appointment or fill out
                 the email form below and a team member will reach out!
             </p>
-            <button class="animated-button3">
+            <button class="animated-button3" onclick="window.location.href='https://ftr.janeapp.com/'">
                 <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
@@ -156,8 +167,12 @@
         </div>
     </div>
 
-    <div class="px-4 py-5 my-5 text-center">
+    <div class="px-4 py-5 my-5 text-center" id="contact">
         <div class="col-lg-6 mx-auto">
+            <p class="lead mb-4 text-white">
+                Still not convinced we're the right choice? Send us a message and we will reach out to answer any
+                questions you have.
+            </p>
             <form>
                 <div class="mb-3">
                     <label for="name" class="form-label text-white">Name</label>
@@ -180,7 +195,41 @@
                         required></textarea>
                 </div>
 
-                <button type="submit" class="btn btn-primary btn-lg mt-3">Send Message</button>
+                <!-- Privacy & Consent Statement -->
+                <div class="privacy-section mt-4 p-3 border rounded"
+                    style="background-color: rgba(255,255,255,0.1); text-align: left;">
+                    <h6 class="text-white mb-3">Privacy & Consent Statement</h6>
+
+                    <p class="text-white small mb-3">
+                        Form Theory is committed to protecting your privacy and will only use your personal information
+                        to manage your account and provide the services you request. From time to time, we may contact
+                        you with information about our services, events, or resources that may be relevant to you.
+                    </p>
+
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="checkbox" id="marketing-consent">
+                        <label class="form-check-label text-white small" for="marketing-consent">
+                            I agree to receive communications from Form Theory about services, events, and relevant
+                            resources.<span class="text-danger">*</span>
+                        </label>
+                    </div>
+
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="checkbox" id="data-consent" required>
+                        <label class="form-check-label text-white small" for="data-consent">
+                            I agree to allow Form Theory to store and process my personal data to provide the requested
+                            services. <span class="text-danger">*</span>
+                        </label>
+                    </div>
+
+                    <p class="text-white small mb-0">
+                        You can unsubscribe from communications at any time. For details on how to unsubscribe, our
+                        privacy practices, and our commitment to safeguarding your information, please review our <a
+                            href="privacy.html" class="text-white text-decoration-underline">Privacy Policy</a>.
+                    </p>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-lg mt-4">Send Message</button>
             </form>
         </div>
     </div>
@@ -208,8 +257,8 @@
                     <div class="col-6 col-md-4 mb-3 text-white">
                         <h5 class="mb-3">Address</h5>
                         <address>
-                            123 Recovery Way<br>
-                            City, ST 45678<br>
+                            312A Wilson Pike Circle<br>
+                            Brentwood, TN 37027<br>
                             United States<br>
                             <a href="mailto:info@example.com"
                                 class="text-white text-decoration-underline">info@example.com</a><br>
