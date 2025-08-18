@@ -27,6 +27,14 @@ gsap.from(".slide-up-on-scroll", {
   }
 });
 
+const toggle = document.getElementById('hamburgerToggle');
+const links = document.getElementById('hamburgerLinks');
+
+toggle.addEventListener('click', () => {
+  links.classList.toggle('show');        // show/hide menu
+  toggle.classList.toggle('active');     // transform hamburger into X
+});
+
 document.getElementById('contactForm').addEventListener('submit', async function (e) {
   e.preventDefault();
 
@@ -78,3 +86,5 @@ document.getElementById('contactForm').addEventListener('submit', async function
     statusMessage.style.display = 'block';
   }
 });
+
+
