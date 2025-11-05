@@ -578,7 +578,7 @@ html {
   }
 
   .hero p {
-    font-size: 22px;
+    font-size: 32px;
   }
 
   .social-icons {
@@ -596,7 +596,7 @@ html {
 /* Mobile */
 @media (max-width: 480px) {
   .hero h1 {
-    font-size: 28px;
+    font-size: 48px;
     width: 350px;
   }
 
