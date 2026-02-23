@@ -10,3 +10,4 @@ pnpm-lock.yaml
 .env
 .env.*
 !.env.example   # optional: keep an example env file
+.DS_Store 
