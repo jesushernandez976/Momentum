@@ -30,7 +30,7 @@ html {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 110% !important;
   object-fit: cover;
   z-index: 1;
 }
@@ -569,6 +569,8 @@ html {
 .social-icons img:hover {
   transform: scale(1.2);
 }
+
+
 
 /* Tablet */
 @media (max-width: 768px) {
